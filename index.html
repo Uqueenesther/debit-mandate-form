@@ -8,22 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body >
+    <div class="container">
     <header>
         <div class="logo-container">
             <img src="cylogo.png" alt="logo" class="logo"/> 
           </div>
     </header> 
-    <div class="form-container">
-    <form action="#" class="sub-details">
+     <form action="#" class="form-container">
+    
         <div><h3 class="hesh3-1">Direct Debit Mandate Form</h3>
             <h5>  Subscriber Details</h5>
         </div>
         <!-- Subscriber details -->
-         <div class="sub-form-row-1">
+         <div class="sub-form-col-1">
             <div class="input-data">
               <label for="">First Name</label>
               <input type="text" class="input-Dark" required >  
             </div>
+            <!-- Last name for mobile view -->
+             <div class="input-data lastname-mb">
+                <label for="">Last Name</label>
+                <input type="text" class="input-Dark" required >  
+              </div>
+
             <div class="input-data">
                 <input type="text" class="input-Dark" required >  
             </div>
@@ -37,9 +44,9 @@
             
              <div class="input-data">
                 <label>Town</label>
-                <input type="text" class="input-Dark">
+                <input type="text" class="input-Dark-state">
                 <label>State</label>
-                <input type="text" class="input-Dark">
+                <input type="text" class="input-Dark-state">
             </div>
             <div class="input-data">
                 <label>Email</label>
@@ -49,31 +56,31 @@
                 <label> Alternative Email</label>
                 <input type="email" class="input-Dark"> 
             </div>
-            <div class="">
-                Policy Type:
+            <div class="policy-sub">
+             <span class="span"> Policy Type:</span>
                 <label>Individual</label>
-                <input type="checkbox">
+                <input type="checkbox"class="policy-sub-1" >
                 <label>Coporate</label>
-                <input type="checkbox">       
+                <input type="checkbox" class="policy-sub-1">       
            </div>
         </div>
         <!-- subcription details column 2 -->
-        <div class="sub-form-row-2">
-            <div class="input-data">
+        <div class="sub-form-col-2">
+            <div class="input-data lastname-dsk">
                 <label for="">Last Name</label>
                 <input type="text" class="input-Dark" required>   
             </div>
-            <div class="input-data">
+            <div class="input-data lastname-dsk">
                 <input type="text" class="input-Dark empty">   
             </div>
             
-                <div class="gender">
+                <div class="checkbox-container">
                 Gender:
-                    <div class="Male">
+                    <div class="checkbox1">
                     <label>Male</label>
                     <input type="checkbox">
                     </div>
-                    <div class="Female">
+                    <div class="checkbox2">
                     <label>Female</label>
                     <input type="checkbox">
                     </div>
@@ -101,20 +108,22 @@
         </div> 
 
          <!-- Bank details -->
-        <span class="bank-details-sub-header"> Bank Account Details</span>
+       
         <!-- bank details column 1 -->
-        <div class="bank-form-row-1">
+        
+        <div class="bank-form-col-1">
+            <span class="span PD-left"> Bank Account Details</span>
             <div class="input-data">
                 <label>Account Holder's Name</label>
                 <input type="text" class="input-Dark">
             </div>
-            <div class="">
+            <div class="amount">
                 <label>Account NUmber</label>
-                <input type="number">
+                <input type="number" class="amount-input">
             </div>
-            <div class="">
+            <div class="amount">
                 <label>Amount</label>
-                <input type="number">
+                <input type="number" class="amount-input">
             </div>
             <div class="input-data">
                 <label>Amount in words</label>
@@ -125,7 +134,7 @@
             </div>
      </div>
          <!-- bank details column 2 -->
-        <div class="sub-form-row-2">
+        <div class="bank-form-col-2">
             <div class="input-data">
                 <label>Subcription ID/Code</label>
                 <input type="text" class="input-Dark">
@@ -144,72 +153,74 @@
       </div> 
 
           <!-- Payment details -->
-     <div class="payment-form-row-1">
-            <div class="">
-                Payment Type:
+     <div class="payment-form-col-1">
+            <div class="payment-type">
+                <span class="span ">Payment Type:</span>
                 <label>Fixed Amount:</label>
-                <input type="checkbox">
+                <input type="checkbox" class="payment-type1" >
                 <label>Variable Amount:</label>
-                <input type="checkbox">
+                <input type="checkbox" >
             </div>
-            <div class="">
+            <div class="payment-date">
                 <label>Start Date</label>
-                <input type="date">
+                <input type="date" class="payment-start">
                 <label>End Date</label>
-                <input type="date">
+                <input type="date" class="payment-end">
             </div> 
-            <div class="">
+            <div class="payment-type">
                 <label>First Payment date</label>
-                <input type="date">
+                <div><input type="date" class="first-payment"></div>
             </div>
-            <div class="">
+            <div class="payment-signature">
                 <label>Signature and date</label>
-                <input type="text">
+               <div> <input type="text" class="Signature"></div>
             </div> 
      </div>
            <!-- payment column 2 -->
-        <div class="payment-form-row-2">
-            <div class="">
-                Policy Type:
+        <div class="payment-form-col-2">
+            <div class="policy2">
+              <span class="span">  Policy Type:</span>
                 <label>Individual:</label>
-                <input type="checkbox">
+                <input type="checkbox" class="checkbox">
                 <label>Corporate:</label>
-                <input type="checkbox">
+                <input type="checkbox" class="checkbox">
             </div>  
-            <div class="">
-                 <div>
+            <div >
+                 <div class="frequency">
                     Frequency:
                     <label>Daily</label>
-                    <input type="checkbox">
+                    <input type="checkbox" class="checkbox">
                     <label>Weekly</label>
-                    <input type="checkbox">
+                    <input type="checkbox" class="checkbox">
                     <label>Monthly</label>
-                    <input type="checkbox">
+                    <input type="checkbox"class="checkbox">
                  </div>
                
-               <div>
+               <div class="frequency">
                 <label>Anually</label>
-                <input type="checkbox">
+                <input type="checkbox" class="checkbox">
                 <label>Biannually</label>
-                <input type="checkbox">
+                <input type="checkbox" class="checkbox">
                 <label>Quarterly</label>
-                <input type="checkbox">
+                <input type="checkbox" class="checkbox">
                </div>
             </div>
-            <div class="">
+            <div class="Signature-con">
                 <label>Signature and date</label>
-                <input type="text">
-            </div>
+               <div> <input type="text" class="Signature"></div>
+            </div> 
         </div>
-    </form>  
-</div>
+    
+    </form>
 <!-- Footer -->
- <footer>
+ <footer class="footer">
     <p>Incorrect filled forms will not be processed<br/>
     Kindly attach a void copy of your cheque leaf. Please print 'Void' boldly across the cheque leaf<br/>
     This mandate shall remain in force until such time when counter instruction are received
    </p>
 </footer>
+</div>
+    
 </body>
 </html>
 

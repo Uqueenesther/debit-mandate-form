@@ -4,10 +4,16 @@ html{
     box-sizing: border-box;}
 
  body{
-        margin: 6rem;
-        font-family: Open Sans, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+    font-family: Open Sans, sans-serif;
         
     }
+.container{
+    margin: 5rem;
+}
 .logo-container{
    display: flex;  
 }
@@ -15,38 +21,41 @@ html{
     height: 50px;
     margin-left: auto;
 }
-.form-container{
-    
-}
 
 /* grid layout */
-.sub-details{
+.form-container {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-column-gap: 3rem;
-    
-}
-.sub-form-row-1{
-   grid-column: 1/2;
-   padding-bottom: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    overflow-x: hidden;
+    grid-gap:10px;
 }
 
-.sub-form-row-2{
-    grid-column:2/2; 
-   
+.sub-form-col-1{
+   grid-column: 1/2;
+
 }
-.bank-form-row-1{
+
+.sub-form-col-2{
+    grid-column:2/2; 
+
+}
+.bank-form-col-1{
     grid-column: 1/2; 
 }
-.bank-form-row-2{
+.bank-form-col-2{
     grid-column:2/2;
+    padding-top: 2.3rem;
+   
 }
 
-.payment-form-row-1{
+.payment-form-col-1{
     grid-column: 1/2;
 }
 
-.payment-form-row-2{
+.payment-form-col-2{
+    grid-column: 2/2;
+}
+.footer{
     grid-column: 2/2;
 }
 
@@ -54,30 +63,192 @@ html{
 .input-data{
    padding: 1rem;
    display: flex;
-  justify-items:center;
+   align-items: center;
 }
 .input-Dark{
     border: none;
-    border-bottom: 2px solid black;
-    flex: 1;
+    box-sizing: border-box;
+    flex-grow: 1; 
     padding: 4px;
-
+    border-bottom: 2px solid black;
+    transition: border-bottom-color 0.3s ease-in-out;
+    border-width:0px 0px 2px 0px;
+   
   }
+   
+.input-Dark-state{  
+    border: none;
+    border-bottom: 2px solid black;
+    width: 50%; 
+    padding: 4px;
+  }
+
+input:focus {
+    outline:none;
+    border-image: linear-gradient(to right, #929092 0%, #94817d 100%) 1;
+    border-width:0px 0px 2px 0px;
+ }
+
+ .lastname-mb{
+    display: none;
+ }
+.policy-sub{
+    margin-top: 1.5rem;
+    padding: 1rem;
+   
+}
+.policy-sub-1{
+    width: 2rem;
+}
+.PD-left{
+    /* padding-left: 1rem; */
+}
+.amount{
+    padding-left: 1rem;
+}
+.amount-input{
+    width: 60%; 
+    height: 2rem;
+    margin: .5rem;
+}
   .empty{
     margin-bottom: 1rem;
   }
-.gender{
+.checkbox-container{
    display: flex;
    padding: 1rem;
 }
-.Male{
+.checkbox1{
     margin-left: 1rem;
  }
- .Female{
+ .checkbox2{
     margin-left: 5rem;
  }
+ .checkbox{
+    padding: 1rem;
+ }
 /* Bank details */
-.bank-details-sub-header{
+.span{
     font-weight: 700;
     color: black;
 }
+.payment-type{
+   padding: 1rem;
+}
+.payment-signature{
+    padding: 1rem;
+}
+.payment-type1{
+    margin-right: 1rem;
+}
+.payment-date{
+    padding: 1rem;
+}
+.payment-start{
+    margin-right: 1rem;
+    height: 2rem;
+    width: 21%;
+}
+.payment-end{
+    height: 2rem;
+    width: 21%;
+}
+.first-payment{
+    width: 40%;
+    height: 2rem;
+}
+.policy2{
+    /* padding: 1rem; */
+    margin: 2rem;
+}
+.frequency{
+margin: 2rem;
+}
+.Signature{
+    height: 2rem;
+    width: 70%;
+}
+.Signature-con{
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+.footer{
+    margin-top: 10rem;
+}
+
+/* media query */
+@media (max-width:1080) {
+    
+}
+@media (max-width: 900px) {
+    .container {
+        margin: 3rem 2rem 2rem;
+    
+       
+    }
+    
+    .form-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-data {
+        padding: .65rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .policy-sub {
+        padding: 1rem;
+        margin-top: 0px;
+    }
+    
+    .lastname-mb{
+        display: flex;
+     }
+    .lastname-dsk{
+        display: none;
+    }
+    .bank-form-col-2 {
+        padding-top: .5rem;
+    }
+    .checkbox-container {
+        display: flex;
+        padding-top: 0px;
+    }
+    .amount-input {
+        width: 95%;
+        height: 2rem;
+        margin: 0.5rem;
+    }
+    .payment-date {
+        padding-top: 0px;
+    }
+    .payment-type {
+        padding-top: 0px;
+    }
+    .payment-signature{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .policy2 {
+        margin: 0px;
+        padding: 1rem;
+    }
+    .frequency {
+        margin: 0px;
+        padding: .8rem;
+    }
+    .Signature{
+        height: 4rem;
+        width: 70%;
+    }
+    .Signature-con {
+        margin-top: 0px;
+        padding: .8rem;
+    }
+    .footer {
+        margin-top: 2rem;
+    }
+  }
